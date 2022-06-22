@@ -1,0 +1,423 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <main>
+        <section>
+            <div class="col-12">
+                <div class="service-text">
+                    <h1>
+                        OUR SERVICES
+                    </h1>
+                </div>
+            </div>
+         <div class="container">
+            <div class="row">
+                
+         @foreach (var item in Model.services)
+        {
+               <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="icon">
+                        
+                        <i class="fa-solid  fa-heart"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">@item.Title</h5>
+                      <p class="card-text">@item.Desc</p>
+                      <a href="#" class="btn readmore">Read More</a>
+                    </div>
+                  </div>
+            </div>
+            
+        }
+            
+            </div>
+         </div>
+
+        </section>
+
+        
+
+        <section>
+          <div class="slideshow-container">
+
+            <div class="mySlides">
+              <q>The7 is an extraordinary, awesome Theme, I would recommend this Theme to anyone for their next project. Go ahead and download<br> it now!</q>
+              <p class="author">- -David Bell</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>The good times are for those who take action. The7 is a simple and easy to use template for creative people. Download this theme<br> and give it a try!</q>
+              <p class="author">- -Eve Stinger</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>Awesome theme! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt possimus eveniet aperiam, minus<br> deleniti iure ipsa praesentium amet, labore voluptatum fugit earum, porro non sequi sint soluta reprehenderit ad?</q>
+              <p class="author">- Will Peters
+              </p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+              
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            </div>
+          
+            <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+              </script>
+              
+        </section>
+
+        <section>
+          <div class="col-12">
+            <div class="service-text">
+                <h1>
+                  OUR BLOG
+                </h1>
+            </div>
+        </div>
+       
+        <div class="container">
+          <div class="row">    
+    @foreach (var item in Model.blogs)
+   {
+         <div class="col-6">
+        <div class="card post" style="width: 35rem;">
+            <img src="~/assets/images/post/@item.Image" alt="">
+            <div class="post-body">
+             <a href="#">
+              <h5 class="post-title">@item.Title</h5>
+             </a>
+             <a href="#">
+              <span>
+               @item.Time.ToString("dd,MMMM,yyyy") ·@item.Profession
+              </span>
+             </a>
+
+              <p class="card-text">@Html.Raw(item.Desc)</p>
+              <a href="#" class="btn post-more">Read More</a>
+            </div>
+          </div>
+    </div>
+   }
+
+    
+      
+          </div>
+        </div>
+        
+        </section>
+
+        <section>
+          <div class="col-12">
+            <div class="service-text">
+                <h1>
+                  PRICING TABLES
+                </h1>
+            </div>
+        </div>
+<div class="container">
+  <div class="row">
+    
+               
+    <div class="col-3">
+      <div class="card-price" style="width: 18rem;">
+        .
+        <div class="price-title">
+          <h3>ECONOMY</h3>
+        </div>
+          <div class="price">
+              
+           <div class="price-text">
+            <span>$10/m</span>
+           </div>
+          </div>
+          
+          <div class="price-desc">
+             <p> 1GB Storage</p>
+             <p>2 Clients</p>
+             <p>5 Active Projects</p>
+             <p>Free Goodies</p>
+             <p>24/7 Email support</p>
+          </div>
+          
+          
+            <a href="#" class="btn purchase">Purchase</a>
+          </div>
+        
+  </div>
+
+  <div class="col-3">
+    <div class="card-price" style="width: 18rem;">
+      .
+      <div class="price-title">
+        <h3>ECONOMY</h3>
+      </div>
+        <div class="price">
+            
+         <div class="price-text">
+          <span>$10/m</span>
+         </div>
+        </div>
+        <div class="price-desc">
+          <p> 5GB Storage</p>
+          <p>10 Clients</p>
+          <p>5 Active Projects</p>
+          <p>Free Goodies</p>
+          <p>24/7 Email support</p>
+       </div>
+       
+          <a href="#" class="btn purchase">Purchase</a>
+        </div>
+      
+</div>
+
+<div class="col-3">
+  <div class="card-price" style="width: 18rem;">
+    .
+    <div class="price-title">
+      <h3>ECONOMY</h3>
+    </div>
+      <div class="price">
+          
+       <div class="price-text">
+        <span>$10/m</span>
+       </div>
+      </div>
+      
+      <div class="price-desc">
+        <p> 15GB Storage</p>
+        <p>15 Clients</p>
+        <p>15 Active Projects</p>
+        <p>Free Goodies</p>
+        <p>24/7 Email support</p>
+     </div>
+     
+        <a href="#" class="btn purchase">Purchase</a>
+      </div>
+    
+</div>
+
+<div class="col-3">
+<div class="card-price" style="width: 18rem;">
+  .
+  <div class="price-title">
+    <h3>ECONOMY</h3>
+  </div>
+    <div class="price">
+        
+     <div class="price-text">
+      <span>$10/m</span>
+     </div>
+    </div>
+    
+    <div class="price-desc">
+      <p> Unlimited Storage</p>
+      <p>Unlimited Clients</p>
+      <p>Unlimited Active Projects</p>
+      <p>Free Goodies</p>
+      <p>24/7 Email support</p>
+   </div>
+   
+      <a href="#" class="btn purchase">Purchase</a>
+    </div>
+  
+</div>
+  </div>
+</div>
+        </section>
+
+
+        <section>
+          <div class="col-12">
+            <div class="service-text">
+                <h1>
+                  OUR TEAM 
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row">
+          @foreach (var item in Model.teams)
+         {
+               <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/team/@item.Image" alt="Card image cap">
+                <div class="card-body">
+                  <p class="team-text">@item.Author
+                    </p>
+                    <span>@item.Profession</span>
+                </div>
+              </div>
+            </div>
+         }
+           
+          </div>
+        </div>
+        </section>
+
+        <section>
+          <div class="slideshow-container">
+
+            <div class="mySlides">
+             <div class="icon">
+              
+             </div>
+              <p class="author">- -David Bell</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>The good times are for those who take action. The7 is a simple and easy to use template for creative people. Download this theme<br> and give it a try!</q>
+              <p class="author">- -Eve Stinger</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>Awesome theme! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt possimus eveniet aperiam, minus<br> deleniti iure ipsa praesentium amet, labore voluptatum fugit earum, porro non sequi sint soluta reprehenderit ad?</q>
+              <p class="author">- Will Peters
+              </p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+              
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            </div>
+          
+            <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+              </script>
+              
+        </section>
+
+        <section>
+          <div class="col-12">
+            <div class="contact-text">
+                <h1>
+              CONTACT
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+                <div class="container">
+                  <div class="row">
+                    <h4>Talk to us
+                     
+                      </h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iusto fugit esse soluta quae debitis quibusdam harum voluptatem, maxime, aliquam sequi. Tempora ipsum magni unde velit corporis fuga, necessitatibus blanditiis.
+
+                      </p>
+                      <div>
+                        <div class="box-icon">
+                            <i class="icon-location"></i>
+                        </div>
+                        <p>Address:</p>
+                        <p>9983 City name, Street name, 232 Apartment C</p>
+                    </div>
+                    
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-clock"></i>
+                        </div>
+                        <p>Work Time:</p>
+                        <p>Monday - Friday from 9am to 5pm</p>
+                    </div>
+                    
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <p>Phone:</p>
+                        <p>595 12 34 567</p>
+                    </div>                                  
+                </address>
+            </div>
+        </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="content contact-form">
+                        <form class="form">
+                            <input type="text" class="comment-name" placeholder="Name*" required>
+                            <input type="email" class="comment-email" placeholder="Email*" required>
+                            <input type="text" class="comment-subject" placeholder="Subject">
+                            <textarea class="required comment-text" placeholder="Message..." required></textarea>
+                            <input type="submit" value="Send Message" class="btn btn-success">
+                        </form>
+                  
+                    </div>
+               
+               
+                 </div>
+                </div>
+            </div>
+
+        
+          
+          </div>
+        </div>
+        </section>
+    </main>
+

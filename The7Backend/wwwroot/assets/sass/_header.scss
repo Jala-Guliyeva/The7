@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+.navul{
+    
+margin-left: 500px;
+display: flex; 
+justify-content: flex-end;
+color: #fff;
+
+}
+.the7{
+    margin-left: 300px;
+    font-size: 35px;
+    color: #fff;
+    
+
+}
+nav{
+    position: relative;
+   background-image: url(slider-1.jpg);
+    top: 70px;
+    right: 15px;
+    color: #fff;
+    
+   
+}
+.nav-link{
+    color:#fff;
+}
+.navbar-text{
+    color: #fff;
+}
+.carousel-text{
+    position: absolute;
+     top: 70px;
+     right: 15px;
+     margin-top: 300px;
+     padding-right: 200px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     h4{
+      
+        font-size: 30px;
+     }
+}
+
+
+.btn-find{
+    color: aliceblue;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: 20px;
+
+}
+.service-text{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+

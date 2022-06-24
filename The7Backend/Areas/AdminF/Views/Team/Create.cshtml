@@ -1,0 +1,32 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminF/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col=md-12">
+             <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group" >
+                      <label asp-for="Photo">Photo</label>
+                      <input asp-for="Photo"  class="form-control"   accept="image/*">
+                      <span asp-validation-for="Photo"></span>
+                    </div>
+                    <div class="form-group">
+                      <label asp-for="Author">Desc</label>
+                      <input asp-for="Author"  class="form-control"  placeholder="author">
+                      <span asp-validation-for="Author"></span>
+
+                    </div> 
+                       <div class="form-group">
+                      <label asp-for="Profession">Desc</label>
+                      <input asp-for="Profession"  class="form-control"  placeholder="Desc">
+                      <span asp-validation-for="Profession"></span>
+
+                    </div> 
+                    <button type="submit" class="btn btn-primary mr-2" asp-action="index" asp-controller="team">Create</button>
+                  </form>
+        </div>
+       
+    </div>
+</div>

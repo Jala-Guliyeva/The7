@@ -24,9 +24,12 @@
                       <span asp-validation-for="Desc"></span>
 
                     </div> 
-                    <a asp-controller="slider" asp-action="Index" class="btn btn-primary" >Update</a>
+                    <a class="btn btn-primary" >Update</a>
                   </form>
         </div>
        
     </div>
 </div>
+@section Scripts{
+    <partial name="_Validation"/>
+}

@@ -82,7 +82,7 @@ namespace The7Backend.Areas.AdminF.Controllers
                 }
                 //string path = @"C:\Users\TOSHIBA\Desktop\FiorelloAdminF\FiorelloTask\wwwroot\img\";
 
-                string fileName = await slider.Photo.SaveImage(_env, "img");
+                string fileName = await slider.Photo.SaveImage(_env, "assets/images");
                 Slider newSlider = new Slider();
                 newSlider.Desc = slider.Desc;
                 newSlider.Title = slider.Title;

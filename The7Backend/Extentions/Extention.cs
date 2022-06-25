@@ -10,7 +10,7 @@ namespace FiorelloTask.Extentions
     {
         public static bool IsImage(this IFormFile file)
         {
-            return file.ContentType.Contains("image");
+            return file.ContentType.Contains("image/");
         }
         public static bool ImageSize(this IFormFile file,int kb)
         {

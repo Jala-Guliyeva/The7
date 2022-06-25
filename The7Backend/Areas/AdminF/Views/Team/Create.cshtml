@@ -24,9 +24,12 @@
                       <span asp-validation-for="Profession"></span>
 
                     </div> 
-                    <button type="submit" class="btn btn-primary mr-2" asp-action="index" asp-controller="team">Create</button>
+                    <button type="submit" class="btn btn-primary mr-2" >Create</button>
                   </form>
         </div>
        
     </div>
 </div>
+@section Scripts{
+    <partial name="_Validation"/>
+}

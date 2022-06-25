@@ -80,7 +80,7 @@ namespace The7Backend.Areas.AdminF.Controllers
                 }
                 //string path = @"C:\Users\TOSHIBA\Desktop\FiorelloAdminF\FiorelloTask\wwwroot\img\";
 
-                string fileName = await team.Photo.SaveImage(_env, "img");
+                string fileName = await team.Photo.SaveImage(_env, "assets/images");
                 Team newTeam = new Team();
                 newTeam.Author = team.Author;
                 newTeam.Image = fileName;

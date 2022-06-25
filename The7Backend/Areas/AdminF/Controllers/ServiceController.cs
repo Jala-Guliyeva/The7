@@ -81,7 +81,7 @@ namespace The7Backend.Areas.AdminF.Controllers
                 }
                 //string path = @"C:\Users\TOSHIBA\Desktop\FiorelloAdminF\FiorelloTask\wwwroot\img\";
 
-                string fileName = await service.Photo.SaveImage(_env, "img");
+                string fileName = await service.Photo.SaveImage(_env, "assets/images");
                 Service newService = new Service();
                 newService.Desc = service.Desc;
                 newService.Title = service.Title;

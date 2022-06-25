@@ -24,9 +24,12 @@
                       <span asp-validation-for="Desc"></span>
 
                     </div> 
-                    <a asp-controller="Service" asp-action="Index" class="btn btn-primary" >Update</a>
+                    <button type="submit"  class="btn btn-primary" >Update</button>
                   </form>
         </div>
        
     </div>
 </div>
+@section Scripts{
+    <partial name="_Validation"/>
+}

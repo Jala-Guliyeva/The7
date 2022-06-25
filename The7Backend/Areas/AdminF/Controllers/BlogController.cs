@@ -79,7 +79,7 @@ namespace The7Backend.Areas.AdminF.Controllers
                 }
                 //string path = @"C:\Users\TOSHIBA\Desktop\FiorelloAdminF\FiorelloTask\wwwroot\img\";
 
-                string fileName = await blog.Photo.SaveImage(_env, "img");
+                string fileName = await blog.Photo.SaveImage(_env, "assets/images");
                 Blog newBlog = new Blog();
                 newBlog.Desc = blog.Desc;
                 newBlog.Title = blog.Title;
@@ -119,6 +119,9 @@ namespace The7Backend.Areas.AdminF.Controllers
             if (dbBlog == null) return NotFound();
             dbBlog.Title = blog.Title;
             dbBlog.Desc = blog.Desc;
+            dbBlog.Profession = blog.Profession;
+            dbBlog.Time = blog.Time;
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

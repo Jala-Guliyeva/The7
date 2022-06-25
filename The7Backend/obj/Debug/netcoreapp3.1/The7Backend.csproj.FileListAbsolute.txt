@@ -166,3 +166,4 @@ C:\Users\TOSHIBA\Desktop\The7Backend\The7Backend\obj\Debug\netcoreapp3.1\Razor\A
 C:\Users\TOSHIBA\Desktop\The7Backend\The7Backend\obj\Debug\netcoreapp3.1\Razor\Areas\AdminF\Views\Slider\Update.cshtml.g.cs
 C:\Users\TOSHIBA\Desktop\The7Backend\The7Backend\obj\Debug\netcoreapp3.1\Razor\Areas\AdminF\Views\Team\Create.cshtml.g.cs
 C:\Users\TOSHIBA\Desktop\The7Backend\The7Backend\obj\Debug\netcoreapp3.1\Razor\Areas\AdminF\Views\Team\Update.cshtml.g.cs
+C:\Users\TOSHIBA\Desktop\The7Backend\The7Backend\obj\Debug\netcoreapp3.1\Razor\Areas\AdminF\Views\Shared\_Validation.cshtml.g.cs
